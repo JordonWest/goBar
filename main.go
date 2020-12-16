@@ -8,11 +8,12 @@ import (
 
 type Beer struct{
   name, brand string
-  abv, rating int
+  abv, rating, stock int
 }
 
-func (beer Beer) beer_stats() {
-  return Beer
+func (beer *Beer) take_one() {
+  beer.stock = beer.stock - 1
+}
 
 func show_inv(list []string) {
   for _, beer := range list {
@@ -24,9 +25,10 @@ func welcome() string{
 }
 
 func main() {
-  inventory := []string{"beer 1", "beer 2", "beer 3"}
-  fmt.Println("Hello world!")
-  show_inv(inventory)
-  fmt.Println(welcome())
+  //inventory := []string{"beer 1", "beer 2", "beer 3"}
+  corova := Beer{"Batman", "Corova", 3, 5, 100}
+  fmt.Println(corova)
+  corova.take_one()
+  fmt.Println(corova)
 }
 
