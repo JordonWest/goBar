@@ -20,12 +20,16 @@ func show_inv(list []string) {
     fmt.Printf("Beer name: %v\n", beer)
   }
 }
-func welcome() string{
-  return "welcome to the beer store!"
+func welcome(name string) string{
+  return "welcome to the beer store " + name + "!"
 }
 
 func main() {
   //inventory := []string{"beer 1", "beer 2", "beer 3"}
+  var user string
+  fmt.Println("Who are you?")
+  fmt.Scanln(&user)
+  fmt.Println(welcome(user))
   corova := Beer{"Batman", "Corova", 3, 5, 100}
   fmt.Println(corova)
   corova.take_one()
