@@ -9,3 +9,6 @@ Functions:
 Display inventory
 give specifics on a specific beer by name or id
 
+Stretch:
+display in web form
+
