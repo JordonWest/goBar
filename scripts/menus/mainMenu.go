@@ -2,7 +2,6 @@
 package menus
 
 import ("fmt"
-        "github.com/goBar/scripts/menus"
         )
 
 func MainMenu() {
@@ -13,11 +12,20 @@ func MainMenu() {
   fmt.Println("2: See our hours")
   fmt.Scanln(&selection)
   if selection == "1" {
-    menus.BeerMenu()
+    fmt.Println(BeerMenu())
   }else if selection == "2" {
-    menus.Hours()
+    fmt.Println(Hours())
   }else{
     fmt.Println("Please select a valid choice")
     MainMenu()
   }
 }
+
+
+func Hours() string {
+  return "PLACEHOLDER -- HOURS -- PLACEHOLDER"
+  }
+
+func BeerMenu() string {
+  return "PLACEHOLDER -- BEER MENU -- PLACEHOLDER"
+  }
