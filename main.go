@@ -4,6 +4,7 @@ package main
 import (
   "fmt"
 //  "github.com/goBar/data"
+  "github.com/goBar/scripts/menus"
 )
 
 type Beer struct{
@@ -34,5 +35,6 @@ func main() {
   fmt.Println(corova)
   corova.take_one()
   fmt.Println(corova)
+  menus.MainMenu()
 }
 
