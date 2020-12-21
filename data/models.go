@@ -1,4 +1,5 @@
 package data 
+// need to implement structures here
 
 import (
   "database/sql"
