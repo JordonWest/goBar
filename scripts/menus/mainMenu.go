@@ -2,7 +2,17 @@
 package menus
 
 import ("fmt"
+        "time"
         )
+func Hours() string {
+  day := (time.Now().Weekday()).String()
+  hours := map[string]string{"Sunday":"closed", "Saturday":"1000 to 2200"}
+  otherDays := []string{"Monday", "Tuesday", "Wednesday", "Thursday", "Friday"}
+  for _, day := range otherDays {
+    hours[day] = "1000 to 1600"
+  }
+  return "Our hours today are: " + hours[day]
+}
 
 func MainMenu() {
   var selection string
@@ -22,10 +32,8 @@ func MainMenu() {
 }
 
 
-func Hours() string {
-  return "PLACEHOLDER -- HOURS -- PLACEHOLDER"
-  }
-
 func BeerMenu() string {
+  
   return "PLACEHOLDER -- BEER MENU -- PLACEHOLDER"
   }
+
